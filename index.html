@@ -10,8 +10,9 @@
   <meta name="keywords" content="" />
   <meta name="author" content="" />
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6TR1CCZBJ"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -32,6 +33,7 @@
   <!--Replace with your tailwind.css once created-->
   <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
   <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+  </style>
 
   <style>
     @import url("https://rsms.me/inter/inter.css");
@@ -61,7 +63,7 @@
     .browser-mockup {
       border-top: 2em solid rgba(230, 230, 230, 0.7);
       position: relative;
-      height: 60vh;
+      height: 90vh;
       background: url(product-demo.png);
       background-size: cover;
       background-repeat: no-repeat;
@@ -89,6 +91,48 @@
 
     footer div {
       background: #e6e6e6
+    }
+
+    @keyframes cfFadeInOut {
+      0% {
+        opacity: 1;
+      }
+
+      45% {
+        opacity: 1;
+      }
+
+      55% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #cf img.top {
+      animation-name: cfFadeInOut;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 7s;
+      animation-direction: alternate;
+    }
+
+    #cf {
+      position: relative;
+      height: 281px;
+      width: 450px;
+      margin: 0 auto;
+    }
+
+    #cf img {
+      position: absolute;
+      left: 0;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
     }
   </style>
 </head>
@@ -151,13 +195,16 @@
     </div>
 
     <div class="flex items-center w-full mx-auto content-end">
-      <div class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"></div>
+      <div id="cf" class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl">
+        <img class="bottom" src="./discord-talk.png" />
+        <img class="top" src="./product-demo.png" />
+      </div>
     </div>
   </div>
 
 
   <section class="bg-gray-100 border-b py-8">
-    <div class="container max-w-5xl mx-auto m-8">
+    <div class="container max-w-5xl mx-auto m-44">
       <div class="flex flex-wrap">
         <div class="w-5/6 sm:w-1/2 p-6">
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
@@ -301,7 +348,8 @@
               transform="translate(-59 -184.58065)" fill="#e6e6e6" />
             <path
               d="M603.50654,187.32058s10.1409,1.9075,12.486,14.55507a23.21848,23.21848,0,0,1,.1986,6.458c-.23417,2.43453.10551,7.57652,5.39169,13.63115a132.54611,132.54611,0,0,1,9.625,12.3611h0l-10.59635,2.82088-4.73443-17.55619a89.81,89.81,0,0,0-10.49445-24.12052l-.09734-.15618s-3.51941,9.40374-12.95235,10.6929l2.90849-3.82932s-11.02717,6.37454-17.27469,8.32184a4.1048,4.1048,0,0,0-1.32458,7.13786q.06646.05228.13538.10463c4.59519,3.4902,13.96973,11.81815,10.26616,19.87433s.61537,9.525.61537,9.525l-7.96409-3.02978-3.64516-1.56094.36833,2.69513-17.79458.3728s-4.80856-.02921,3.73277-12.86474c0,0,2.061-4.81282.369-8.48965a19.53106,19.53106,0,0,1-1.97238-8.94938C561.2909,202.37394,566.74227,176.04747,603.50654,187.32058Z"
-              transform="translate(-59 -184.58065)" fill="#2f2e41" /></svg>
+              transform="translate(-59 -184.58065)" fill="#2f2e41" />
+          </svg>
         </div>
       </div>
 
